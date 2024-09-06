@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Aadhaar via OTP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="amblem_logo.png" alt="Government of India Logo" class="logo-left">
+            <div class="header-title">
+                <h1>Unique Identification Authority of India</h1>
+                <p>Government of India</p>
+            </div>
+        </div>
+        <img src="aadhaar_logo.png" alt="Aadhaar Logo" class="logo-right">
+    </div>
+
+    <div class="login-container">
+        <h2>Login to Aadhaar via 3FA</h2>
+        <form id="loginForm">
+            <label for="aadhaar">Enter Aadhaar Number</label>
+            <input type="text" id="aadhaar" name="aadhaar" placeholder="XXXX XXXX XXXX" maxlength="19" required>
+    
+            <label for="captcha">Enter Captcha</label>
+            <div class="captcha-container">
+                <input type="text" id="captcha" name="captcha" required>
+                <img src="captcha.jpeg" alt="captcha" class="captcha-image">
+                <button type="button" class="refresh-captcha">&#x21bb;</button>
+            </div>
+    
+            <button type="submit" id="loginBtn">Receive OTP via SMS</button>
+        </form>
+        
+        <!-- OTP Section - initially hidden -->
+        <div id="otpSection" style="display:none; margin-top: 20px;">
+            <p id="otpMessage" style="margin-top: 10px; font-weight: bold; color: green;"></p>
+            <input type="text" id="otp" name="otp" maxlength="6" placeholder="Enter OTP" required>
+    
+            <button id="verifyOtpBtn" class="verify-otp-btn">Verify OTP</button>
+        </div>
+    </div>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
