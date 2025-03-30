@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Face Recognition</title>
+    <link rel="stylesheet" href="facial-styles.css">
+</head>
+
+<body>
+
+    <div id="camera-permission-modal" class="modal">
+        <div class="modal-content">
+            <h2>Camera Permission</h2>
+            <p>Please allow camera access.</p>
+            <button id="allow-camera-btn">Allow Camera</button>
+        </div>
+    </div>
+
+    <main id="main-content" style="display:none;">
+        <div id="upload-section">
+            <div id="imageInfo"></div>
+        </div>
+
+        <div id="container">
+            <video id="video-feed" height="560" width="720" autoplay></video>
+            <canvas id="canvas"></canvas>
+        </div>
+    </main>
+
+    <script src="./face-api.min.js"></script>
+    <script src="./facial-scripts.js"></script>
+
+</body>
+
+</html>
